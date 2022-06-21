@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import shortid from 'shortid';
 import s from './ContactForm.module.css';
 
-export default function ContactForm({ onSubmit }) {
+function ContactForm({ onSubmit }) {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
@@ -73,3 +73,9 @@ export default function ContactForm({ onSubmit }) {
     </form>
   );
 }
+
+ContactForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
+
+export default ContactForm;
